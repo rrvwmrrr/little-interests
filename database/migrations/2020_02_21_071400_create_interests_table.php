@@ -11,7 +11,11 @@ class CreateInterestsTable extends Migration
         Schema::create('interests', function (Blueprint $table) {
             $table->bigIncrements('id');
 
-            // add fields
+            $table->foreignId('interesting_id');
+            $table->string('interesting_type');
+
+            $table->foreignId('interested_id');
+            $table->string('interested_type');
 
             $table->timestamps();
         });

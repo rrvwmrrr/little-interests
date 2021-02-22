@@ -2,8 +2,11 @@
 
 namespace Rrvwmrrr\Interests\Traits;
 
-trait IsInteresting {
-    public static function bootIsInteresting() {
+use Rrvwmrrr\Interests\Interest;
 
+trait IsInteresting {
+    public function interests()
+    {
+        return $this->hasMany(Interest::class);
     }
 }

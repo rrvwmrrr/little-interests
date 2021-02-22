@@ -23,4 +23,9 @@ class Interest extends Model
     //         'name' => 'Non auditable user',
     //     ]);
     // }
+
+    public function interested()
+    {
+        return $this->morphTo();
+    }
 }
